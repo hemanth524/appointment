@@ -4,7 +4,7 @@ import { Navigate, NavLink, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
 
-    const Navigate=useNavigate();
+    const navigate=useNavigate();
     const [showMenu,setshowMenu]=useState(false)
     const [token, setToken]=useState(true);
 
@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className='flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-500 '>
-        <img className=' md:w-44 w-26  cursor-pointer ' src={assets.logo} alt=''/>
+        <img onClick={()=>navigate('/')} className=' md:w-44 w-26  cursor-pointer ' src={assets.logo} alt=''/>
         <ul className='  hidden  md:flex  items-start gap-5 font-medium text-lg '>
             <NavLink to={'/'} >
                 <li  className='py-1'>Home</li>
@@ -39,15 +39,15 @@ const Navbar = () => {
                       <img  className='w-2.5' src={assets.dropdown_icon}/>
                       <div className='absolute  top-0 right-0 pt-14 text-base font-medium text-gray-600 z-20  hidden group-hover:block '>
                       <div className='min-w-48 bg-stone-100 rounded  flex flex-col gap-4 p-4'> 
-                      <p onClick={()=>Navigate('Profile')} className='hover:text-black cursor-pointer'> My Profile</p>
-                      <p onClick={()=>Navigate('MyAppointments')} className='hover:text-black cursor-pointer'> My Appointments</p>
+                      <p onClick={()=>navigate('Profile')} className='hover:text-black cursor-pointer'> My Profile</p>
+                      <p onClick={()=>navigate('MyAppointments')} className='hover:text-black cursor-pointer'> My Appointments</p>
                       <p  onClick={()=>setToken(false)} className='hover:text-black cursor-pointer'> Logout</p> 
                       </div>
                       </div>
                       
                  </div>
                
-                :<button  onClick={()=>Navigate('/Login')} className='border-none bg-blue-400 rounded-full px-8 py-1 md:py-3 text-white  font-light hidden md:block '>Create Account</button>
+                :<button  onClick={()=>navigate('/Login')} className='border-none bg-blue-400 rounded-full px-8 py-1 md:py-3 text-white  font-light hidden md:block '>Create Account</button>
 
 
             }
