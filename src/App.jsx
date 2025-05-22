@@ -4,12 +4,12 @@ import Home from './pages/Home'
 import Doctors from './pages/Doctors'
 import Login from './pages/Login'
 import About from './pages/About'
-import Content from './pages/Content'
 import Profile from './pages/Profile'
 import MyAppointments from './pages/MyAppointments'
 import Appointment from './pages/Appointment'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Contact from './pages/Contact'
 
 const App = () => {
   return (
@@ -21,7 +21,8 @@ const App = () => {
           <Route path='/doctors/:speciality' element={<Doctors/>}/>
           <Route path='/Login' element={<Login/>}/>
            <Route path='/About' element={<About/>}/>
-            <Route path='/Content' element={<Content/>}/>
+            <Route path='/Contact' element={<Contact/>}/>
+            
             <Route path='/Profile' element={<Profile/>}/>
             <Route path='/MyAppointments' element={<MyAppointments/>}/>
             <Route path='/Appointment/:docId' element={<Appointment/>}/>

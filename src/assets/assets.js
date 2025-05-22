@@ -15,6 +15,12 @@ import info_icon from './info_icon.svg'
 import upload_icon from './upload_icon.png'
 import stripe_logo from './stripe_logo.png'
 import razorpay_logo from './razorpay_logo.png'
+import banglore from './banglore.jpeg'
+import chennai from './chennai.jpeg'
+import mumbai from './mumbai.jpeg'
+import hyderabad from './hyderabad.jpeg'
+import kolkotha from './kolkotha.jpeg'
+import delhi from './delhi.jpeg'
 import doc1 from './doc1.png'
 import doc2 from './doc2.png'
 import doc3 from './doc3.png'
@@ -58,6 +64,33 @@ export const assets = {
     stripe_logo,
     razorpay_logo
 }
+
+export const cities=[
+    {
+        cityname:'banglore',
+        image:banglore
+    },
+    {
+        cityname:'chennai',
+        image:chennai
+    },
+    {
+        cityname:'mumbai',
+        image:mumbai
+    },
+    {
+        cityname:'kolkotha',
+        image:kolkotha
+    },
+    {
+        cityname:'delhi',
+        image:delhi
+    },
+    {
+        cityname:'hyderabad',
+        image:hyderabad
+    }
+]
 
 export const specialityData = [
     {
