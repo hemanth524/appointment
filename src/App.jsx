@@ -10,25 +10,32 @@ import Appointment from './pages/Appointment'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Contact from './pages/Contact'
+import CityDoctors from './pages/Citydoctors'
+import Cities from './pages/Cities'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
     <div className='mx-4 sm:mx-[10%]'>
-      <Navbar/>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/doctors' element={<Doctors/>}/>
-          <Route path='/doctors/:speciality' element={<Doctors/>}/>
-          <Route path='/Login' element={<Login/>}/>
-           <Route path='/About' element={<About/>}/>
-            <Route path='/Contact' element={<Contact/>}/>
-            
-            <Route path='/Profile' element={<Profile/>}/>
-            <Route path='/MyAppointments' element={<MyAppointments/>}/>
-            <Route path='/Appointment/:docId' element={<Appointment/>}/>
-        </Routes>
-        <Footer/>
-
+      <ToastContainer/>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/doctors' element={<Doctors />} />
+        <Route path='/doctors/:speciality' element={<Doctors />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path="/cities" element={<Cities />} />
+        <Route path='/cities/:cityname' element={<CityDoctors />} />
+        <Route path='/cities/:cityname/:speciality' element={<CityDoctors />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/myappointments' element={<MyAppointments />} />
+        <Route path='/appointment/:docId' element={<Appointment />} />
+      </Routes>
+      <Footer />
     </div>
   )
 }

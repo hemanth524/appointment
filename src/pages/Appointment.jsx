@@ -16,10 +16,10 @@ const Appointment = () => {
     const [slottime,setslottime]=useState('')
 
     const fetchDocInfo = async () => {
-      const docInfo = doctors.find(doc=>doc._id === docId)
-      setDocInfo(docInfo)
-      console.log(docInfo)
-    }
+  const allDoctors = [...doctors];
+  const docInfo = allDoctors.find(doc => doc._id === docId);
+  setDocInfo(docInfo);
+};
 
     const getAvailableSlots=async()=>{
             
@@ -68,9 +68,9 @@ const Appointment = () => {
 
     
 
-    useEffect(()=>{
-        fetchDocInfo()
-    },[doctors,docId])
+    useEffect(() => {
+  fetchDocInfo();
+}, [docId, doctors]);
 
     useEffect(()=>{
         getAvailableSlots()

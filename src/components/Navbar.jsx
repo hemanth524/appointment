@@ -22,6 +22,10 @@ const Navbar = () => {
                 <li className='py-1' >All Doctors</li>
                 <hr className='border-none outline-none h-0.5 bg-blue-300  w-4/5 m-auto hidden' />
             </NavLink>
+            <NavLink to={'/Cities'}> 
+                <li className='py-1' >Cities</li>
+                <hr className='border-none outline-none h-0.5  bg-blue-300 w-4/5 m-auto hidden' />
+            </NavLink>
               <NavLink to={'/About'}>
                 <li  className='py-1'>About</li>
                 <hr className='border-none outline-none h-0.5 bg-blue-300  w-4/5 m-auto hidden' />
@@ -30,6 +34,7 @@ const Navbar = () => {
                 <li className='py-1' >Contact</li>
                 <hr className='border-none outline-none h-0.5  bg-blue-300 w-4/5 m-auto hidden' />
             </NavLink>
+            
         </ul>
         <div className='flex items-center gap-4'>
             {
